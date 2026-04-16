@@ -49,7 +49,10 @@ public class UserDetailsServiceImplTest{
     @Test
     void loadUserByUserNameTest(){
         // 1. Create YOUR custom entity (not the Spring Security one)
-        net.engineeringdigest.journalApp.entity.User userEntity = new net.engineeringdigest.journalApp.entity.User("testuser3","abc");
+//        net.engineeringdigest.journalApp.entity.User userEntity = new net.engineeringdigest.journalApp.entity.User("testuser3","abc");
+        net.engineeringdigest.journalApp.entity.User userEntity = new net.engineeringdigest.journalApp.entity.User();
+        userEntity.setUserName("testuser3");
+        userEntity.setPassword("abc");
         userEntity.setRoles(new ArrayList<>()); // Initialize roles list
 
         // 2. Tell Mockito to return your entity

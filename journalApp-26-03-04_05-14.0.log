@@ -1,0 +1,24 @@
+05:14:00.101 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService': Unsatisfied dependency expressed through field 'redisService': Error creating bean with name 'redisService': Unsatisfied dependency expressed through field 'redisTemplate': Error creating bean with name 'redisTemplate' defined in class path resource [net/engineeringdigest/journalApp/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0: Error creating bean with name 'org.springframework.boot.data.redis.autoconfigure.LettuceConnectionConfiguration': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'spring.data.redis-org.springframework.boot.data.redis.autoconfigure.DataRedisProperties': Could not bind properties to 'DataRedisProperties' : prefix=spring.data.redis, ignoreInvalidFields=false, ignoreUnknownFields=true
+05:14:00.161 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+05:14:00.172 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+05:14:00.212 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.data.redis.port' to int:
+
+    Property: spring.data.redis.port
+    Value: ""
+    Origin: class path resource [application.yml] - 16:12
+    Reason: failed to convert java.lang.String to int (caused by java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type)
+
+Action:
+
+Update your application's configuration
+
