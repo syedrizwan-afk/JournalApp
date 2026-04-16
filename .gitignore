@@ -36,3 +36,4 @@ build/
 # Application Properties/YML (Contains Secrets)
 application.yml
 application.properties
+application-prod.yml
